@@ -1,4 +1,5 @@
 ---
+import Hiya from "../components/index/Hiya.astro";
 import ThisWebside from "../components/index/ThisWebside.astro";
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/NavbarIndex.astro";
@@ -15,6 +16,8 @@ import DocBody from "../components/DocBody.astro";
 <Layout>
 	<Navbar />
 	<DocBody>
+		<Hiya />
+		<div style="height: 4em;"></div>
 		<ThisWebside />
 		
 	</DocBody>

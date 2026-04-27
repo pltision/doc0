@@ -1,0 +1,253 @@
+---
+import "@style/active.css";
+---
+
+<div class="p0_outside">
+    <h1 class="title">
+        <img
+            src="https://pltision.github.io/resources/说的道理.gif"
+            class="说的道理符号"
+        /><span style="color: yellow;"
+            >大家 <span
+                style="color: red;transform: scale(1.7,1.2) skew(-5deg,-10deg);display: inline-block;width: 1.25em;"
+                >好</span
+            >啊, 我是
+            <span class="wavy-text" style="color: greenyellow;">
+                <span>p</span><span>r</span><span>a</span><span>m</span><span
+                    >i</span
+                ><span>l</span><span>a</span>
+            </span>!
+            <img
+                src="https://pltision.github.io/resources/说的道理.gif"
+                class="说的道理符号"
+            /></span
+        >
+    </h1>
+    <div class="p0_style">
+        <p>
+            这是一个用 Astro 开发，部署在 Netlify 上的 <span class="纯字"
+                >纯</span
+            > 静态网站。为了使首页更加<span class="引人注目">引入注目</span>,
+            我用了<span class="超多的">超多的</span><span class="CSS装饰"
+                >CSS</span
+            >填充它<span
+                style="display: inline-block;animation: infinite linear 10s 转圈动画;"
+                >😋</span
+            >
+        </p>
+        
+    </div>
+</div>
+
+<style>
+    .HTML装饰 {
+        color: red;
+        text-shadow: darkred 1px 1px 1px;
+        display: inline-block;
+        margin-left: 0.4em;
+        margin-right: 0.4em;
+        transform: scale(1.2, 2) translateY(-0.1em);
+        font-weight: 1000;
+    }
+
+    .HTML装饰::before {
+        text-shadow: aqua 1px 1px 1px;
+        content: "<";
+        color: blue;
+    }
+
+    .HTML装饰::after {
+        text-shadow: aqua 1px 1px 1px;
+        content: ">";
+        color: blue;
+    }
+
+    .纯字 {
+        background: -webkit-linear-gradient(
+            315deg,
+            lightblue 30%,
+            white 45%,
+            lightblue 60%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: infinite 3s 纯字闪耀;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    @keyframes 纯字闪耀 {
+        40% {
+            background-position: -1em 0;
+        }
+
+        70% {
+            background-position: 1em 0;
+        }
+    }
+
+    .title {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-shadow: #0004 1px 2px 5px;
+        max-width: 50em;
+        transform: scale(1.2, 1) rotate(-2deg);
+        background: #ddee00;
+        border: 4mm ridge #00cc00;
+        animation: 0.5s 标题恢复动画;
+    }
+
+    .title:hover {
+        transform: scale(1.2, 1) rotate(0deg);
+        animation: 0.5s 标题悬停动画;
+    }
+
+    @keyframes 标题悬停动画 {
+        0% {
+            transform: scale(1.2, 1) rotate(-2deg);
+        }
+    }
+
+    @keyframes 标题恢复动画 {
+        0% {
+            transform: scale(1.2, 1) rotate(0deg);
+        }
+    }
+
+    .p0_style {
+        border: solid greenyellow 6px;
+        background: green;
+        border-radius: 30px;
+        padding: 1em;
+
+        color: greenyellow;
+        max-width: 1600px;
+
+        padding-top: 4em;
+        margin-top: -4em;
+    }
+
+    .p0_style:hover {
+        animation: 0.5s p0动画;
+        transform: scale(1, 1);
+        padding-top: 2em;
+        margin-top: -2em;
+    }
+
+    @keyframes p0动画 {
+        0% {
+            padding-top: 4em;
+            margin-top: -4em;
+        }
+
+        50% {
+            transform: scale(1.1, 1.1);
+        }
+    }
+
+    .p0_style a {
+        color: yellow;
+    }
+
+    .p0_outside {
+        animation: infinite alternate ease-in-out 3.1415s 摇摆动画;
+    }
+
+    .p0_outside:hover{
+        animation-play-state: paused;
+    }
+
+    @keyframes 摇摆动画 {
+        0% {
+            transform: rotate(-1deg) translateY(-0.5em);
+        }
+
+        /* 50% {
+				transform: rotate(0deg) translateX(0.06em) translateY(0em);
+			} */
+        100% {
+            transform: rotate(1deg) translateY(0.5em);
+        }
+    }
+
+    .引人注目 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        text-shadow: #f8f 0px 0px 7px;
+        animation: infinite linear 0.2s 引人注目动画;
+    }
+
+    @keyframes 引人注目动画 {
+        0% {
+            text-shadow: #f8f 0px 0px 7px;
+        }
+
+        33% {
+            text-shadow: #ff8 0px 0px 7px;
+        }
+
+        66% {
+            text-shadow: #8ff 0px 0px 7px;
+        }
+    }
+
+    .超多的 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        animation: infinite 1s 超多的动画;
+        display: inline-block;
+        transform: rotate(45deg);
+    }
+
+    @keyframes 超多的动画 {
+        0% {
+            transform: scale(1.5, 0.75);
+        }
+
+        50% {
+            transform: scale(0.75, 1.5);
+        }
+        100% {
+            transform: scale(1.5, 0.75);
+        }
+    }
+
+    .CSS装饰 {
+        font-weight: bold;
+        background: -webkit-linear-gradient(
+            0deg,
+            #ff0 0%,
+            #0ff 33%,
+            #f0f 67%,
+            #ff0 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: infinite 20s alternate linear CSS装饰动画;
+        display: inline-block;
+        font-size: 1.1em;
+        margin: 0.1em;
+        transform: scale(1, 1.4);
+        font-style: italic;
+    }
+
+    .CSS装饰::after {
+        content: "";
+        width: 0.2em;
+        display: inline-block;
+    }
+
+    @keyframes CSS装饰动画 {
+        0% {
+            background-position: 10em 0;
+        }
+
+        100% {
+            background-position: -10em 0;
+        }
+    }
+</style>
