@@ -1,13 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/NavbarIndex.astro';
+import ThisWebside from "../components/index/ThisWebside.astro";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/NavbarIndex.astro";
+import DocBody from "../components/DocBody.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<style>
+	
+</style>
+
 <Layout>
-	<Navbar></Navbar>
-	<Welcome />
+	<Navbar />
+	<DocBody>
+		<ThisWebside />
+		
+	</DocBody>
 </Layout>
+
+<style is:inline>
+	.doc-body{
+		background: #0002;
+	}
+</style>
+
+<style>
+	
+	body{
+		background: -webkit-linear-gradient(
+            25deg,
+            #ff4 0%,
+            #4ff 33%,
+            #f4f 67%,
+            #ff4 100%
+        ) fixed;
+	}
+</style>
