@@ -1,0 +1,156 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+    <aside>
+        <h2 class="data-title">磷剃</h2>
+        <section>
+            <div class="data-item">
+                <h3 class="data-label">
+                    名字
+                </h3>
+                <div class="data-value">
+                    磷剃
+                </div>
+            </div>
+            <div class="data-item">
+                <h3 class="data-label">
+                    名字（英语）
+                </h3>
+                <div class="data-value">
+                    pramila
+                </div>
+            </div>
+            <div class="data-item">
+                <h3 class="data-label">
+                    生日
+                </h3>
+                <div class="data-value">
+                    6月2日
+                </div>
+            </div>
+            <div class="data-item">
+                <h3 class="data-label">
+                    <span>珍品藏柜描述</span><i>（可是你没有珍宝柜）</i>
+                </h3>
+                <div class="data-value">
+                    磷剃是一只活蹦乱跳的生物，除睡觉时间外。它呈现绿色，可以利用阳光和储存的水分补充营养。
+                </div>
+            </div>
+            <div class="data-item">
+                <h3 class="data-label">存活的可能性</h3>
+                <div class="data-value">适中</div>
+            </div>
+            <div class="data-item">
+                <h3 class="data-label">能力</h3>
+                <div class="data-value">
+                    <p>光合作用</p>
+                    <p>可以吸水以临时抵抗潮湿</p>
+                    <p>不太会打架</p>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="data-title">体质</h2>
+        <section>
+            <div class="data-item">
+                <div class="data-vitals">
+                    <p class="data-vital">
+                        [生命] 120 <small>(0.8)</small>
+                    </p>
+                    <p class="data-vital">
+                        [饥饿] 150 <small>(1)</small>
+                    </p>
+                    <p class="data-vital">
+                        [潮湿] 300 <small>(3)</small>
+                    </p>
+                </div>
+            </div>
+            <div class="data-item">
+                <h3 class="data-label">最爱食物</h3>
+                <div class="data-value">[火龙果派] <i>疑似亲友入口即化？但我也没说它是仙人掌，最多有基因重组的关系。</i></div>
+            </div>
+        </section>
+    </aside>
+
+    <h1>磷剃</h1>
+
+    <h2><del>描述</del></h2>
+    <del>然而你并不需要此项。</del>
+
+    <h2>饥荒类游戏</h2>
+
+    <p>磷剃适合作为饥荒类游戏中的基础角色，因为它对环境抗逆性强，且负面特质较弱。（仅有生命值是标准角色的0.8倍这一项）</p>
+    <p>磷剃适合在多雨且有阳光的地带生存，如林隙和水源附近。更高的潮湿度上限可以让他们比其他角色更晚受到潮湿惩罚，潮湿惩罚会直到角色的潮湿超过 200 时开始显现。</p>
+    <p>这使得他们可以在雨中外出（大约10分钟），早上出门并在晚上返回基地烤干。</p>
+    <p>但是较低的生命值让他们不那么适合战斗，同时在 洞穴、遗迹 等封闭环境无法享受到阳光带来的光合作用和水分蒸腾。</p>
+
+    <h2>著作权信息</h2>
+    <p>© 2026 pramila</p>
+    <p>本作品采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> 许可证授权。</p>
+    <p>您可以自由地传播、修改及用作商业用途，但必须署名并以相同方式共享。</p>
+    <p>如涉及形象权、隐私权或人格权，在按照您的需要使用该作品前，您可能需要得到更多许可。</p>
+
+</Layout>
+
+
+<style>
+    aside {
+        display: inline-block;
+        float: right;
+        background-color: #ede3caf7;
+        width: 20em;
+    }
+
+.data-title {
+        text-align: center;
+        margin: 0em;
+        padding: 0.333em;
+        background-color: #7a5f50f7;
+        color: white;
+    }
+
+    .data-item {
+        display: flex;
+        align-items: center;
+        border-top: solid black 1px;
+        font-size: 14px;
+    }
+
+    .data-label {
+        /* display: inline-block; */
+        flex: 0 0 6em;
+        text-align: center;
+        margin: 0.5em;
+        /* padding: 0.5em; */
+        /* font-weight: normal; */
+        /* display: flex; */
+        font-size: 14px;
+    }
+    .data-value {
+        text-align: left;
+        /* display: inline-block; */
+        margin: 0.5em;
+        /* padding: 0.5em; */
+    }
+
+    .data-value > p {
+        margin: 0;
+    }
+
+    .data-vitals{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .data-vital{
+        /* width: 6em; */
+        display: inline-block;
+        margin: 0;
+        padding:0.5em;
+    }
+    
+</style>

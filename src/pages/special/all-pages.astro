@@ -1,0 +1,22 @@
+<!-- ---
+
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+
+const pages = defineCollection({
+  loader: glob({ pattern: "**/*", base: "./src/pages" }),
+});
+
+export const collections = { pages };
+---
+
+<main>
+  <h1>网站所有页面</h1>
+  <ul>
+    {pages.map(page => (
+      <li>
+        <a href={page.url}>{page.url}</a>
+      </li>
+    ))}
+  </ul>
+</main> -->
