@@ -51,9 +51,6 @@ import DataDS from "@/components/data/ds/pramila.astro";
             <li>
                 <p>pramila的原型 <i>可能</i> 是猫而不是犬科动物。不过倒也不需要在意这一点，反正 furry 角色不是不能乱画。</p>
             </li>
-            <li>
-                缺少故事？这是个元信息有没有懂的。
-            </li>
         </ul>
         
 

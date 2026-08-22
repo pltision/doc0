@@ -1,22 +1,53 @@
-<!-- ---
+---
+import Layout from '@/layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
 
-import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+// 1. 获取 src/pages 的绝对路径
+const pagesDir = path.join(process.cwd(), 'src', 'pages');
 
-const pages = defineCollection({
-  loader: glob({ pattern: "**/*", base: "./src/pages" }),
-});
+// 2. 递归获取所有 .astro 文件的相对路径（相对于 src/pages）
+function getAllAstroFiles(dir, baseDir = dir) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  let files = [];
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files = files.concat(getAllAstroFiles(fullPath, baseDir));
+    } else if (entry.isFile() && entry.name.endsWith('.astro')) {
+      // 获取相对于 baseDir 的路径，并转为 POSIX 风格（/）
+      const relative = path.relative(baseDir, fullPath);
+      const posix = relative.split(path.sep).join('/');
+      files.push(posix);
+    }
+  }
+  return files;
+}
 
-export const collections = { pages };
+const filePaths = getAllAstroFiles(pagesDir);
+
+// 3. 生成路由
+const pages = filePaths
+  .map(filePath => {
+    let route = filePath.replace(/\.astro$/, '');
+    if (route === 'index') route = '';
+    return '/' + route;
+  })
+  // .filter(route => route !== '/special/all-pages')
+  .map(url => ({ url }));
 ---
 
-<main>
+<Layout>
   <h1>网站所有页面</h1>
-  <ul>
-    {pages.map(page => (
-      <li>
-        <a href={page.url}>{page.url}</a>
-      </li>
-    ))}
-  </ul>
-</main> -->
+  {pages.length === 0 ? (
+    <p>没有找到任何页面。</p>
+  ) : (
+    <ul>
+      {pages.map(page => (
+        <li>
+          <a href={page.url}>{page.url}</a>
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>
