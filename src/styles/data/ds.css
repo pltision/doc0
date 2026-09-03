@@ -1,8 +1,13 @@
     aside {
         display: block;
         float: right;
-        background-color: #ede3caf7;
         width: 20em;
+        border: solid #482d37 1px;
+        padding: 2px;
+    }
+
+    .data{
+        background-color: #ede3caf7;
     }
 
     .data-title {
@@ -16,7 +21,7 @@
     .data-item {
         display: flex;
         align-items: center;
-        border-top: solid black 1px;
+        border-top: solid #482d37 1px;
         font-size: 14px;
     }
 
