@@ -1,61 +1,69 @@
+aside {
+    display: block;
+    float: inline-end;
+    width: 20em;
+    border: solid #482d37 1px;
+    padding: 2px;
+}
+
+.data {
+    background-color: #ede3caf7;
+}
+
+.data-title {
+    text-align: center;
+    margin: 0em;
+    padding: 0.333em;
+    background-color: #7a5f50f7;
+    color: white;
+}
+
+.data-item {
+    display: flex;
+    align-items: center;
+    border-top: solid #482d37 1px;
+    font-size: 14px;
+}
+
+.data-label {
+    /* display: inline-block; */
+    flex: 0 0 6em;
+    text-align: center;
+    margin: 0.5em;
+    /* padding: 0.5em; */
+    /* font-weight: normal; */
+    /* display: flex; */
+    font-size: 14px;
+}
+
+.data-value {
+    text-align: left;
+    /* display: inline-block; */
+    margin: 0.5em;
+    /* padding: 0.5em; */
+}
+
+.data-value>p {
+    margin: 0;
+}
+
+.data-vitals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.data-vital {
+    /* width: 6em; */
+    display: inline-block;
+    margin: 0;
+    padding: 0.5em;
+}
+
+@media all and (max-width: 32em) {
     aside {
-        display: block;
-        float: right;
-        width: 20em;
-        border: solid #482d37 1px;
-        padding: 2px;
+        float: initial;
+        width: initial;
+        margin: 2.5%;
     }
-
-    .data{
-        background-color: #ede3caf7;
-    }
-
-    .data-title {
-        text-align: center;
-        margin: 0em;
-        padding: 0.333em;
-        background-color: #7a5f50f7;
-        color: white;
-    }
-
-    .data-item {
-        display: flex;
-        align-items: center;
-        border-top: solid #482d37 1px;
-        font-size: 14px;
-    }
-
-    .data-label {
-        /* display: inline-block; */
-        flex: 0 0 6em;
-        text-align: center;
-        margin: 0.5em;
-        /* padding: 0.5em; */
-        /* font-weight: normal; */
-        /* display: flex; */
-        font-size: 14px;
-    }
-
-    .data-value {
-        text-align: left;
-        /* display: inline-block; */
-        margin: 0.5em;
-        /* padding: 0.5em; */
-    }
-
-    .data-value>p {
-        margin: 0;
-    }
-
-    .data-vitals {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .data-vital {
-        /* width: 6em; */
-        display: inline-block;
-        margin: 0;
-        padding: 0.5em;
-    }
+}
