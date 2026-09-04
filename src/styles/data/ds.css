@@ -64,6 +64,8 @@ aside {
     aside {
         float: initial;
         width: initial;
+        /*让侧边栏边缘留出一点空隙，不然看起来有点挤*/
+        /*不确定页面自带maring后还是否需要*/
         margin: 2.5%;
     }
 }
