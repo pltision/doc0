@@ -1,0 +1,27 @@
+---
+// 导入 Image 组件和图像
+import { Image } from 'astro:assets';
+import myImage from '../assets/dg/full_small.png'; // 图像是 1600x900
+import  Health  from '@/components/dg/Health.astro';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout>
+    <!-- `alt` 在 Image 组件上是必需的 -->
+    <Image src={myImage} alt="我的图像描述。" style="height: max-content;width: auto;image-rendering: pixelated; "/>
+    <br/>
+    <Health p="999"/>
+    <br/>
+    <Health p="1"/>
+    <br/>
+    <Health p="2"/>
+    <br/>
+    <Health p="3"/>
+    <br/>
+    <Health p="4"/>
+    <br/>
+    <Health p="5"/>
+    <br/>
+    <Health p="0.1"/>
+</Layout>
+

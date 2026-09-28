@@ -1,0 +1,54 @@
+---
+import HealthIcon from './HealthIcon.astro';
+import HealthIconHarf from './HealthIconHarf.astro';
+
+interface Props {
+  p: string;
+}
+const { p } = Astro.props;
+
+const healthNumber = Number(p);
+
+const overflow = 10;
+
+const displayNumber =
+    // 是不是整数
+    Number.isInteger(healthNumber) &&
+
+    // 是不是正数（如果是NaN那也为假）
+    healthNumber > 0 &&
+    
+    // 是否小于等于 overflow
+    healthNumber <= overflow
+;
+
+// 计算完整图标数量和是否有半图标
+const fullCount = Math.floor(healthNumber / 2);
+const hasHalf = healthNumber % 2 === 1;
+---
+
+<span class="health-bar" title={p + "点生命"}>
+{
+    displayNumber
+    ?
+        <>
+            { Array.from({ length: fullCount }, () => <HealthIcon />) }
+            { hasHalf && <HealthIconHarf /> }
+        </>
+        
+    :
+        <>
+            <HealthIconHarf />×{p}
+        </>
+}
+</span>
+
+<style>
+    .health-bar{
+        display: inline-block;
+        /* height: 1em; */
+        /* 发现在HP模板中不加这个更好看 */
+        vertical-align: middle;
+        
+    }
+</style>

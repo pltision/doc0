@@ -1,0 +1,19 @@
+---
+// 导入 Image 组件和图像
+import { Image } from 'astro:assets';
+import myImage from '@/assets/dg/harf_small.png'; // 图像是 1600x900
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout>
+    <!-- `alt` 在 Image 组件上是必需的 -->
+    <Image src={myImage} alt="一半的心。" class="health-icon"/>
+</Layout>
+
+<style>
+    .health-icon{
+        height: 1em;
+        width: auto;
+        image-rendering: pixelated; 
+    }
+</style>
