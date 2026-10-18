@@ -1,27 +1,61 @@
 ---
 // 导入 Image 组件和图像
-import { Image } from 'astro:assets';
-import myImage from '../assets/dg/full_small.png'; // 图像是 1600x900
-import  Health  from '@/components/dg/Health.astro';
-import Layout from '@/layouts/Html.astro';
+import { Image } from "astro:assets";
+import myImage from "../assets/dg/full_small.png"; // 图像是 1600x900
+import Health from "@/components/dg/Health.astro";
+import Layout from "@/layouts/Html.astro";
 ---
 
 <Layout>
     <!-- `alt` 在 Image 组件上是必需的 -->
-    <Image src={myImage} alt="我的图像描述。" style="height: max-content;width: auto;image-rendering: pixelated; "/>
-    <br/>
-    <Health p="999"/>
-    <br/>
-    <Health p="1"/>
-    <br/>
-    <Health p="2"/>
-    <br/>
-    <Health p="3"/>
-    <br/>
-    <Health p="4"/>
-    <br/>
-    <Health p="5"/>
-    <br/>
-    <Health p="0.1"/>
+    <Image
+        src={myImage}
+        alt="我的图像描述。"
+        style="height: max-content;width: auto;image-rendering: pixelated; "
+    />
+    <p>
+        <Health p="999" />
+    </p>
+    <p>
+        <Health p="1" />
+    </p>
+    <p>
+        <Health p="2" />
+    </p>
+    <p>
+        <Health p="3" />
+    </p>
+    <p>
+        <Health p="4" />
+    </p>
+    <p>
+        <Health p="5" />
+    </p>
+    <p>
+        <Health p="0.1" />
+    </p>
+    <p>
+        <Health p="0dfsadjklsaklg" />
+    </p>
+    <p>
+        <Health p="000" />
+    </p>
+    <p>
+        <Health p="077" />
+    </p>
+    <p>
+        <Health p="067" />
+    </p>
+    <p>
+        <Health p="0xF" />
+    </p>
+    <p>
+        <Health p="NaN" />
+    </p>
+    <p>
+        <Health p="1/1" />
+    </p>
+    <p>
+        <Health p="1/0" />
+    </p>
 </Layout>
-

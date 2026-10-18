@@ -1,0 +1,15 @@
+
+.game-object-icon{
+    height: 1em;
+    width: auto;
+    image-rendering: pixelated; 
+}
+
+/* 发现在Health中加 vertical-align: middle; 好看，但HP模板中不加更好看 */
+/* 可能是因为我认为文字要比图标矮，但是在这里图标是一种文字，所以一样高*/
+.character-game-object-icon{
+    height: 1em;
+    width: auto;
+    image-rendering: pixelated; 
+    vertical-align: middle;
+}

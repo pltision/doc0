@@ -1,15 +1,16 @@
 ---
 // 导入 Image 组件和图像
 import { Image } from 'astro:assets';
-import myImage from '@/assets/dg/harf_small.png'; // 图像是 1600x900
+import myImage from '@/assets/dg/harf_small.png';
+import "@/styles/inline_icon.css"
+
+interface Props {
+    /**
+     *  图片的类
+     */
+    c?: string; 
+}
+const { c = ""} = Astro.props;
 ---
 
-<Image src={myImage} alt="一半的心。" class="health-icon"/>
-
-<style>
-    .health-icon{
-        height: 1em;
-        width: auto;
-        image-rendering: pixelated; 
-    }
-</style>
+<Image src={myImage} alt="一半的心。"class={c}/>
