@@ -34,9 +34,8 @@ const hasHalf = healthNumber % 2 === 1;
 
 {
     // 显示完整心的个数
-    displayFullHeart
-        ? 
-          (
+    displayFullHeart &&
+        (
             <>&nbsp;(</>
             <span title={healthNumber / 2 + " 颗心"}>
                 {printAllOfIcon ? (
@@ -58,6 +57,5 @@ const hasHalf = healthNumber % 2 === 1;
                 )}
             </span>
             <>)</>
-          )
-        : ""
+        )
 }
